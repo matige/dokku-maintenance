@@ -157,7 +157,7 @@ cmd-maintenance-enable() {
   if [[ ! -d "$MAINTENANCE_APP_D" ]]; then
     mkdir -p "$MAINTENANCE_APP_D"
     if [[ -f "$OLD_MAINTENANCE_APP_D/maintenance.html" ]]; then
-      cp -r "$OLD_MAINTENANCE_APP_D/*" "$MAINTENANCE_APP_D"
+      cp -r "$OLD_MAINTENANCE_APP_D"/* "$MAINTENANCE_APP_D"
     else
       cp "$MAINTENANCE_PLUGIN_ROOT/templates/maintenance.html" "$MAINTENANCE_APP_D"
     fi
